@@ -6,6 +6,8 @@
 
 *A practical, no-nonsense guide for building maintainable, scalable, production-ready APIs with Node.js.*
 
+![Node.js Backend Engineering Handbook cover](./assets/handbook-cover.png)
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 [![Made with Node.js](https://img.shields.io/badge/Made%20with-Node.js-339933?logo=node.js&logoColor=white)](https://nodejs.org)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](#-contributing)
@@ -57,6 +59,14 @@ This handbook exists to close that gap: a single, opinionated reference that cap
 | 5 | [Performance & Scalability](./handbook/05-performance-and-scalability.md) | Caching, rate limiting, load balancers, horizontal scaling |
 | 6 | [Production Engineering](./handbook/06-production-engineering.md) | Logging, monitoring, observability, security, CI/CD, Docker, Kubernetes, incident response |
 | 7 | [Senior Engineering Principles](./handbook/07-senior-engineering-principles.md) | Readability, naming, code review, testing, tech debt, DRY/KISS/YAGNI, anti-patterns |
+
+---
+
+## 🖼️ Architecture at a Glance
+
+![Backend architecture diagram — client through load balancer, API gateway, controllers, services, repositories, database, plus Redis, auth, logging, monitoring, external APIs, background jobs, and message queue](./assets/backend-architecture.png)
+
+*The full system taught across these seven chapters — from the client all the way down to the database, with caching, auth, observability, and messaging woven in. See it explained end-to-end starting in [Part 1 — Backend Architecture](./handbook/01-backend-architecture.md).*
 
 ---
 

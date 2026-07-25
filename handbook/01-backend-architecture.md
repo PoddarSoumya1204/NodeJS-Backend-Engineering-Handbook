@@ -31,6 +31,10 @@ Throughout this handbook you'll notice recurring principles. **These principles 
 >
 > The API is merely the interface. The real work is business logic, data consistency, reliability, security, performance, and scalability.
 
+![Backend architecture diagram — client through load balancer, API gateway, controllers, services, repositories, and database, with Redis, auth, logging, monitoring, external APIs, background jobs, and message queue](../assets/backend-architecture.png)
+
+*The full architecture this chapter (and this handbook) is built around — every box above gets its own explanation below.*
+
 ---
 
 ## Concepts
@@ -60,6 +64,8 @@ sequenceDiagram
     S-->>C: Processed result
     C-->>Client: HTTP Response
 ```
+
+![Request lifecycle diagram — request path from Client through Load Balancer, API Gateway, Controller, Service, and Repository to the Database, mirrored by the response path back to the Client](../assets/request-lifecycle.png)
 
 Every layer has a specific responsibility. **Most backend problems occur when responsibilities are mixed.**
 
