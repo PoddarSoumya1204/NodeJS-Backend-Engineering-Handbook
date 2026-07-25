@@ -43,28 +43,6 @@ Throughout this handbook you'll notice recurring principles. **These principles 
 
 Before discussing code, it helps to understand the journey of a request from the moment it leaves the client to the moment a response comes back.
 
-```mermaid
-sequenceDiagram
-    participant Client
-    participant LB as Load Balancer
-    participant GW as API Gateway
-    participant C as Controller
-    participant S as Service
-    participant R as Repository
-    participant DB as Database
-
-    Client->>LB: HTTP Request
-    LB->>GW: Route to healthy node
-    GW->>C: Match route
-    C->>S: Delegate to business logic
-    S->>R: Request data operation
-    R->>DB: Query / Write
-    DB-->>R: Result
-    R-->>S: Data
-    S-->>C: Processed result
-    C-->>Client: HTTP Response
-```
-
 ![Request lifecycle diagram — request path from Client through Load Balancer, API Gateway, Controller, Service, and Repository to the Database, mirrored by the response path back to the Client](../assets/request-lifecycle.png)
 
 Every layer has a specific responsibility. **Most backend problems occur when responsibilities are mixed.**
